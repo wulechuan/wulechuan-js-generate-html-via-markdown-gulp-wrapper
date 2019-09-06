@@ -32,6 +32,50 @@ This is a gulp oriented wrapper for "[@wulechuan/generate-html-via-markdown](htt
 So please refer to the [ReadMe.md](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/master/ReadMe.md) there.
 
 
+## Usage
+
+### Example 1
+
+```js
+const gulp = require('gulp')
+const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
+export function newnewnew() {
+    return gulp.src('./my-first-markdown-article.md')
+    .pipe(gulpMarkdownToHTML())
+    .pipe(gulp.dest('./my-articles-folder'))
+}
+```
+
+
+### Example 2
+
+```js
+const {
+	src: gulpRead,
+	dest: gulpWrite,
+} = require('gulp')
+
+const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
+
+export function newnewnew() {
+    return gulpRead('./your/folder/of/markdowns/**/*.md')
+    .pipe(gulpMarkdownToHTML({
+        // shouldLogVerbosely: true,
+        conversionOptions: {
+            cssClassNameOfHeadingPermanentLinks: undefined,
+            articleTOCListTagNameIsUL: true,
+        },
+        manipulationsOverHTML: {
+            shouldNotInsertBackToTopAnchor: true,
+            shouldNotUseInternalCSSThemingFiles: false,
+            htmlTagLanguage: 'en-US',
+        }
+    }))
+    .pipe(gulpWrite('./your/output/folder'))
+}
+```
+
+
 ## TODOS
 
 Nothing at present.

@@ -33,6 +33,53 @@
 
 使用细则请参阅[该文档](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/master/ReadMe.zh-hans-CN.md)。
 
+
+
+## 用法
+
+### 示例 1
+
+```js
+const gulp = require('gulp')
+const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
+export function newnewnew() {
+    return gulp.src('./我的第一篇markdown文章.md')
+    .pipe(gulpMarkdownToHTML())
+    .pipe(gulp.dest('./我的文库'))
+}
+```
+
+
+### 示例 2
+
+```js
+const {
+	src: gulpRead,
+	dest: gulpWrite,
+} = require('gulp')
+
+const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
+
+export function newnewnew() {
+    return gulpRead('./your/folder/of/markdowns/**/*.md')
+    .pipe(gulpMarkdownToHTML({
+        // shouldLogVerbosely: true,
+        conversionOptions: {
+            cssClassNameOfHeadingPermanentLinks: undefined,
+            articleTOCListTagNameIsUL: true,
+        },
+        manipulationsOverHTML: {
+            shouldNotInsertBackToTopAnchor: true,
+            shouldNotUseInternalCSSThemingFiles: false,
+            htmlTagLanguage: 'en-US',
+        }
+    }))
+    .pipe(gulpWrite('./your/output/folder'))
+}
+```
+
+
+
 ## 未来计划
 
 暂无。
