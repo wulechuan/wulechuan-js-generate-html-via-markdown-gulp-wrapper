@@ -1,0 +1,38 @@
+{
+  "name": "@wulechuan/gulp-markdown-to-html",
+  "author": "wulechuan <wulechuan@live.com>",
+  "license": "WTFPL",
+  "version": "1.0.0-beta1",
+  "description": "A gulpjs oriented wrapper of @wulechuan/generate-html-via-markdown.",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint    ./.eslintrc.js    ./index.js"
+  },
+  "keywords": [
+    "gulp",
+    "plugin",
+    "markdown",
+    "convert",
+    "conversion",
+    "html",
+    "article",
+    "pretty",
+    "beautify",
+    "gorgeous",
+    "responsive"
+  ],
+  "homepage": "https://github.com/wulechuan/wulechuan-generate-html-via-markdown-gulp-wrapper#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulechuan/wulechuan-generate-html-via-markdown-gulp-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wulechuan/wulechuan-generate-html-via-markdown-gulp-wrapper/issues"
+  },
+  "dependencies": {
+    "@wulechuan/generate-html-via-markdown": "^1.0.0",
+    "plugin-error": "^1.0.1",
+    "replace-ext": "^1.0.0",
+    "through2": "^3.0.1"
+  }
+}
