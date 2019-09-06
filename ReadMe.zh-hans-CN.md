@@ -42,7 +42,7 @@
 ```js
 const gulp = require('gulp')
 const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
-export function newnewnew() {
+module.exports = function myGulpTask1() {
     return gulp.src('./我的第一篇markdown文章.md')
     .pipe(gulpMarkdownToHTML())
     .pipe(gulp.dest('./我的文库'))
@@ -60,7 +60,7 @@ const {
 
 const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
 
-export function newnewnew() {
+module.exports = function myGulpTask2() {
     return gulpRead('./your/folder/of/markdowns/**/*.md')
     .pipe(gulpMarkdownToHTML({
         // shouldLogVerbosely: true,

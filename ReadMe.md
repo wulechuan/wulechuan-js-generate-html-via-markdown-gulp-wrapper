@@ -39,7 +39,7 @@ So please refer to the [ReadMe.md](https://github.com/wulechuan/wulechuan-genera
 ```js
 const gulp = require('gulp')
 const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
-export function newnewnew() {
+module.exports = function myGulpTask1() {
     return gulp.src('./my-first-markdown-article.md')
     .pipe(gulpMarkdownToHTML())
     .pipe(gulp.dest('./my-articles-folder'))
@@ -57,7 +57,7 @@ const {
 
 const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
 
-export function newnewnew() {
+module.exports = function myGulpTask2() {
     return gulpRead('./your/folder/of/markdowns/**/*.md')
     .pipe(gulpMarkdownToHTML({
         // shouldLogVerbosely: true,
