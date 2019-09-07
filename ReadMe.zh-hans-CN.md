@@ -34,10 +34,23 @@
 使用细则请参阅[该文档](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/master/ReadMe.zh-hans-CN.md)。
 
 
+### 产品亮点
+
+不须带任何参数，即可轻松获得一份华丽的 HTML 文档。其自带精美主题，宽窄屏全自适应排版。包含文章纲要列表，“返回顶部”按钮（实则链接）等等。
+
+你亦可通过丰富的参数项，精准控制输出 HTML 之方方面面。从文章纲要列表到“返回顶部”按钮。甚至控制内嵌 CSS 和 Javascript 是否为压缩版本，亦有两个专门的选项。
+
+
+### 内嵌样式
+
+内嵌样式来源于本人创建和维护的另一项目，即《[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)》。其文档中亦有若干截图，直观展示一篇文档在应用默认样式后之样貌。见 [该文档](https://github.com/wulechuan/wulechuan-themes-for-htmls-via-markdowns/blob/master/docs/refs/zh-hans-CN/application-examples.md)。
+
 
 ## 用法
 
 ### 示例 1
+
+不带任何参数，使用默认配置。
 
 ```js
 const gulp = require('gulp')
@@ -51,6 +64,8 @@ module.exports = function myGulpTask1() {
 
 
 ### 示例 2
+
+通过参数项，精准控制输出的 HTML。
 
 ```js
 const {
