@@ -61,8 +61,8 @@ module.exports = function myGulpTask1() {
 
 ```js
 const {
-	src: gulpRead,
-	dest: gulpWrite,
+    src: gulpRead,
+    dest: gulpWrite,
 } = require('gulp')
 
 const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
