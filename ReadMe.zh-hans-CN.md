@@ -48,7 +48,9 @@
 
 ## 用法
 
-### 示例 1
+### 示例若干
+
+#### 示例 1
 
 不带任何参数，使用默认配置。
 
@@ -63,7 +65,7 @@ module.exports = function myGulpTask1() {
 ```
 
 
-### 示例 2
+#### 示例 2
 
 通过参数项，精准控制输出的 HTML。
 
@@ -92,6 +94,13 @@ module.exports = function myGulpTask2() {
     .pipe(gulpWrite('./your/output/folder'))
 }
 ```
+
+
+
+### @wulechuan/generate-html-via-markdown 的 API 说明
+
+见 [本文](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/HEAD/ReadMe.zh-hans-CN.md#api)。
+
 
 
 

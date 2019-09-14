@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="./dist/css/wulechuan-styles-for-html-via-markdown--vscode.default.min.css">
-
 # Gulpjs Oriented Wrapper for Wulechuan's Tool for Generating HTMLs via Markdowns
 
 ## Multilingual Editions of this Article
@@ -44,7 +42,9 @@ The CSS file for the built-in theming is from another NPM package of mine, named
 
 ## Usage
 
-### Example 1
+### Examples
+
+#### Example 1
 
 ```js
 const gulp = require('gulp')
@@ -57,7 +57,7 @@ module.exports = function myGulpTask1() {
 ```
 
 
-### Example 2
+#### Example 2
 
 ```js
 const {
@@ -84,6 +84,14 @@ module.exports = function myGulpTask2() {
     .pipe(gulpWrite('./your/output/folder'))
 }
 ```
+
+
+### API of @wulechuan/generate-html-via-markdown
+
+See [here](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown#api).
+
+
+
 
 
 ## TODOS
