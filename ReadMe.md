@@ -42,6 +42,11 @@ The CSS file for the built-in theming is from another NPM package of mine, named
 
 ## Usage
 
+As said above, this package utilizes "[@wulechuan/generate-html-via-markdown](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown)". And this package itself has no extra APIs upon that wrapped package.
+
+So, for the details of how to use this package, please refer to the full documentation of [the APIs of @wulechuan/generate-html-via-markdown](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown#api).
+
+
 ### Examples
 
 #### Example 1
@@ -85,10 +90,6 @@ module.exports = function myGulpTask2() {
 }
 ```
 
-
-### API of @wulechuan/generate-html-via-markdown
-
-See [here](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown#api).
 
 
 
