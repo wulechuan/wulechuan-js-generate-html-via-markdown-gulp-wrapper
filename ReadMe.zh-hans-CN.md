@@ -29,9 +29,8 @@
 
 ## 简介
 
-本工具系对本人另一程序“[@wulechuan/generate-html-via-markdown](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown)”的“包裹”版本，以令其功能适用于 Gulpjs 工具链。
+本工具系对本人另一程序“[@wulechuan/generate-html-via-markdown](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/master/ReadMe.zh-hans-CN.md)”的“包裹”版本，以令其功能适用于 Gulpjs 工具链。
 
-使用细则请参阅[该文档](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/master/ReadMe.zh-hans-CN.md)。
 
 
 ### 产品亮点
@@ -43,17 +42,12 @@
 
 ### 内嵌样式
 
-内嵌样式来源于本人创建和维护的另一项目，即《[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)》。其文档中亦有若干截图，直观展示一篇文档在应用默认样式后之样貌。见 [该文档](https://github.com/wulechuan/wulechuan-themes-for-htmls-via-markdowns/blob/master/docs/refs/zh-hans-CN/application-examples.md)。
+内嵌样式来源于本人创建和维护的另一项目，即《[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)》。其文档中亦有若干截图，直观展示一篇文档在应用默认样式后之样貌。参阅[此文](https://github.com/wulechuan/wulechuan-themes-for-htmls-via-markdowns/blob/master/docs/refs/zh-hans-CN/application-examples.md)。
 
 
 ## 用法
 
-如前所述，本 NPM 包在内部调用另一包（即 “[@wulechuan/generate-html-via-markdown](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown)”）之功能。并且，本 NPM 包本身并未设计额外的 API（应用编程接口）。因此，要了解使用细节，请参阅完整的《[@wulechuan/generate-html-via-markdown 之 API](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown#api)》。
-
-
-### @wulechuan/generate-html-via-markdown 的 API 说明
-
-见 [本文](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/HEAD/ReadMe.zh-hans-CN.md#api)。
+如前所述，本 NPM 包在内部调用另一包（即 “@wulechuan/generate-html-via-markdown”）之功能。并且，本 NPM 包本身并未设计额外的 API（应用编程接口）。因此，要了解使用细节，请参阅完整的《[@wulechuan/generate-html-via-markdown 之 API](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/HEAD/ReadMe.zh-hans-CN.md#api)。
 
 
 

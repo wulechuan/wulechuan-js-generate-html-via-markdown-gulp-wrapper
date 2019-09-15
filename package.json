@@ -2,7 +2,7 @@
   "name": "@wulechuan/gulp-markdown-to-html",
   "author": "wulechuan <wulechuan@live.com>",
   "license": "WTFPL",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "description": "A gulpjs oriented wrapper of @wulechuan/generate-html-via-markdown.",
   "main": "index.js",
   "scripts": {
