@@ -10,7 +10,6 @@ function createNewGulpError(rawError) {
 
 module.exports = function (options) {
     return through.obj(function (file, fileEncoding, callback) {
-
         if (file.isStream()) {
             return callback(createNewGulpError('Streaming is not supported.'))
         }
