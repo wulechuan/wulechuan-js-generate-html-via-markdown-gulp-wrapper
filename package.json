@@ -7,8 +7,8 @@
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "npm test",
-    "eslint": "eslint    ./.eslintrc.js    ./test/**/*.js    ./index.js",
-    "test": "npm run eslint &&    gulp    --gulpfile    ./test/gulpfile.js"
+    "eslint": "eslint    ./.eslintrc.js    ./tests/**/*.js    ./index.js",
+    "test": "npm run eslint &&    gulp    --gulpfile    ./tests/gulpfile.js"
   },
   "keywords": [
     "gulp",
