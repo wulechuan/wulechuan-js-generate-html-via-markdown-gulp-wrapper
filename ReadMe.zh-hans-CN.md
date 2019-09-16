@@ -29,7 +29,7 @@
 
 ## 简介
 
-本工具系对本人另一程序“[@wulechuan/generate-html-via-markdown](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/master/ReadMe.zh-hans-CN.md)”的“包裹”版本，以令其功能适用于 Gulpjs 工具链。
+本工具系对本人另一程序“[@wulechuan/generate-html-via-markdown](https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown/blob/master/ReadMe.zh-hans-CN.md)”的“包裹”版本，以令其功能适用于 Gulpjs 工具链。
 
 
 
@@ -47,7 +47,7 @@
 
 ## 用法
 
-如前所述，本 NPM 包在内部调用另一包（即 “@wulechuan/generate-html-via-markdown”）之功能。并且，本 NPM 包本身并未设计额外的 API（应用编程接口）。因此，要了解使用细节，请参阅完整的《[@wulechuan/generate-html-via-markdown 之 API](https://github.com/wulechuan/wulechuan-generate-html-via-markdown/blob/HEAD/ReadMe.zh-hans-CN.md#api)。
+如前所述，本 NPM 包在内部调用另一包（即 “@wulechuan/generate-html-via-markdown”）之功能。并且，本 NPM 包本身并未设计额外的 API（应用编程接口）。因此，要了解使用细节，请参阅完整的《[@wulechuan/generate-html-via-markdown 之 API](https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown/blob/HEAD/ReadMe.zh-hans-CN.md#api)。
 
 
 
