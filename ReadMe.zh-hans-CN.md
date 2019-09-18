@@ -44,6 +44,11 @@
 
 内嵌样式来源于本人创建和维护的另一项目，即《[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)》。其文档中亦有若干截图，直观展示一篇文档在应用默认样式后之样貌。参阅[此文](https://github.com/wulechuan/wulechuan-themes-for-htmls-via-markdowns/blob/master/docs/refs/zh-hans-CN/application-examples.md)。
 
+> 重要！
+>
+> 本程序包（即《@wulechuan/generate-html-via-markdown》），暂称“甲程序”，系以所谓“peer 依赖”、“平级依赖”的方式调用上述 css 样式项目（称乙程序）的。
+> 这意味着，在安装甲程序时，npm **不会** 自动为你一并安装上乙程序。**你-必-须-亲-自-手-工-安-装-乙-程-序**！
+
 
 ## 用法
 

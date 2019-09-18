@@ -39,6 +39,12 @@ There're plenty of options which provide full controls over the ouptut HTML cont
 The CSS file for the built-in theming is from another NPM package of mine, named "[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)". See some pictures of an example article with the default theme applied [there](https://github.com/wulechuan/wulechuan-css-stylus-themes-for-htmls-via-markdowns/blob/master/docs/refs/en-US/application-examples.md).
 
 
+> IMPORTANT:
+>
+> This package "@wulechuan/generate-html-via-markdown"(package A) peer-depends upon the css theming pacakge(package B) said above.
+> This means when installing pacakge A, npm will **NOT** automatically install package B as well, but rather print some warning messages after installation of package A. **YOU MUST INSTALL PACKAGE B MANUALLY YOURSELF**.
+
+
 ## Usage
 
 As said above, this package utilizes "@wulechuan/generate-html-via-markdown". And this package itself has no extra APIs upon that wrapped package.
