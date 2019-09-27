@@ -89,7 +89,12 @@ module.exports = function myGulpTask2() {
             shouldNotInsertBackToTopAnchor: true,
             shouldNotUseInternalCSSThemingFiles: false,
             htmlTagLanguage: 'en-US',
-        }
+        },
+        behaviousOfBuiltInTOC: {
+            shouldShowOnlyTwoLevelsOfTOCItemsAtMost: true, // So that the TOC is more concise and clean.
+            atBeginingShouldCollapseAllTOCItemsOfLevelsGreaterThan: 1,
+            atBeginingShouldExpandTOCWhenWindowsIsWideEnough: true,
+        },
     }))
     .pipe(gulpWrite('./your/output/folder'))
 }
