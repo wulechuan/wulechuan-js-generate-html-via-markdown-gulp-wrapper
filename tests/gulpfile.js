@@ -1,7 +1,7 @@
 const {
     src: gulpRead,
     dest: gulpWrite,
-    series,
+    parallel,
 } = require('gulp')
 
 const gulpMarkdownToHTML = require('..')
@@ -31,7 +31,7 @@ function generateHTMLViaReadMeZhHansCN() {
         .pipe(gulpWrite('./output'))
 }
 
-module.exports.default = series(
+module.exports.default = parallel(
     generateHTMLViaReadMeEnUS,
     generateHTMLViaReadMeZhHansCN,
 )
