@@ -2,7 +2,7 @@
   "name": "@wulechuan/gulp-markdown-to-html",
   "author": "wulechuan <wulechuan@live.com>",
   "license": "WTFPL",
-  "version": "2.8.10",
+  "version": "2.8.11",
   "description": "A gulpjs oriented wrapper of @wulechuan/generate-html-via-markdown.",
   "main": "index.js",
   "scripts": {
@@ -35,14 +35,14 @@
     "url": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper/issues"
   },
   "peerDependencies": {
-    "@wulechuan/css-stylus-markdown-themes": ">= 6.3.22"
+    "@wulechuan/css-stylus-markdown-themes": ">= 6.3.23"
   },
   "devDependencies": {
-    "@wulechuan/css-stylus-markdown-themes": "^6.3.22",
+    "@wulechuan/css-stylus-markdown-themes": "^6.3.23",
     "gulp": "^4.0.2"
   },
   "dependencies": {
-    "@wulechuan/generate-html-via-markdown": "^2.8.11",
+    "@wulechuan/generate-html-via-markdown": "^2.8.12",
     "plugin-error": "^1.0.1",
     "replace-ext": "^1.0.0",
     "through2": "^3.0.1"
