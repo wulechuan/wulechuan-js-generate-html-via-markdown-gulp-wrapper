@@ -33,5 +33,5 @@ function generateHTMLViaReadMeZhHansCN() {
 
 module.exports.default = parallel(
     generateHTMLViaReadMeEnUS,
-    generateHTMLViaReadMeZhHansCN,
+    generateHTMLViaReadMeZhHansCN
 )
