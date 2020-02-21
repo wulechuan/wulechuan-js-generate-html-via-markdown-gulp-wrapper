@@ -4,3 +4,4 @@ tests
 .eslintignore
 .eslintrc.js
 .markdownlint.json
+*.sh
