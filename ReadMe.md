@@ -108,7 +108,7 @@ module.exports = function myGulpTask2() {
 
 
 
-## TODOS
+## TODOs
 
 Nothing at present.
 
