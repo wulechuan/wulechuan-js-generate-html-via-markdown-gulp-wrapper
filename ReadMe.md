@@ -1,76 +1,85 @@
-# Gulpjs Oriented Wrapper for Wulechuan's Tool for Generating HTMLs via Markdowns
+<link rel="stylesheet" href="./dist/css/wulechuan-styles-for-html-via-markdown--vscode.default.min.css">
+
+# 用于吴乐川将 MarkDown 代码转换为 HTML 代码的工具的针对 Gulpjs 工具链的“包裹”程序
+
 
 ## Multilingual Editions of this Article
 
-- [简体中文版文档](./ReadMe.zh-hans-CN.md)
+- [English version of this ReadMe](./ReadMe.en-US.md)
 
 
 
 
-## NPM Page
+## NPM 页
 
 <dl>
-<dt>Package Name</dt>
+<dt>NPM 包名</dt>
 <dd>
 
 [@wulechuan/gulp-markdown-to-html](https://www.npmjs.com/package/@wulechuan/gulp-markdown-to-html)
 
 </dd>
-<dt>Author</dt>
-<dd><p>wulechuan (南昌吴乐川)</p></dd>
+<dt>作者</dt>
+<dd><p>南昌吴乐川</p></dd>
 </dl>
 
 
 
 
-## Introduction
 
-This is a gulp oriented wrapper for "[@wulechuan/generate-html-via-markdown](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown)".
+## 简介
+
+本工具系对本人另一程序“[@wulechuan/generate-html-via-markdown](https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown/blob/master/ReadMe.md)”的“包裹”版本，以令其功能适用于 Gulpjs 工具链。
 
 
-### Highlights
 
-No need to provide literally anything, you get a full featured HTML. Including gorgeous themes, and responsive layout fitting all sizes of screens, and TOC with smart behaviours, and the pretty "back-to-top" button(an anchor in fact).
+### 产品亮点
 
-There're plenty of options which provide full controls over the ouptut HTML contents. Whether the TOC exists? Whether the "back-to-top" button exists? Whether the embedded CSS codes are minified or not? What about the Javascript codes, should they be minified? Everything is under your controls.
+不须带任何参数，即可轻松获得一份华丽的 HTML 文档。其自带精美主题，宽窄屏全自适应排版。包含文章纲要列表，“返回顶部”按钮（实则链接）等等。
 
-### About the Built-in Themes
+你亦可通过丰富的参数项，精准控制输出 HTML 之方方面面。从文章纲要列表到“返回顶部”按钮。甚至控制内嵌 CSS 和 Javascript 是否为压缩版本，亦有两个专门的选项。
 
-The CSS file for the built-in theming is from another NPM package of mine, named "[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)".
 
-See some pictures of an example article with 2 default themes (a light-colored one and a dark-colred one) applied [there](https://github.com/wulechuan/wulechuan-themes-for-htmls-via-markdowns/blob/master/docs/refs/en-US/application-examples.md).
+### 内嵌样式
+
+内嵌样式来源于本人创建和维护的另一项目，即《[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)》。
+
+其文档中亦有若干截图，直观展示一篇文档在应用两种默认主题样式（一浅色、一深色）后之样貌。见 [该文档](https://github.com/wulechuan/wulechuan-themes-for-htmls-via-markdowns/blob/master/docs/refs/zh-hans-CN/application-examples.md)。
 
 <!-- 
-> IMPORTANT:
+> 重要！
 >
-> This package "@wulechuan/generate-html-via-markdown"(package A) peer-depends upon the css theming pacakge(package B) said above.
-> This means when installing pacakge A, npm will **NOT** automatically install package B as well, but rather print some warning messages after installation of package A. **YOU MUST INSTALL PACKAGE B MANUALLY YOURSELF**.
+> 本程序包（即《@wulechuan/generate-html-via-markdown》），暂称“甲程序”，系以所谓“peer 依赖”、“平级依赖”的方式调用上述 css 样式项目（称乙程序）的。
+> 这意味着，在安装甲程序时，npm **不会** 自动为你一并安装上乙程序。**你必须亲自手工安装乙程序**！
  -->
 
 
-## Usage
+## 用法
 
-As said above, this package utilizes "@wulechuan/generate-html-via-markdown". And this package itself has no extra APIs upon that wrapped package.
-
-So, for the details of how to use this package, please refer to the full documentation of [the APIs of @wulechuan/generate-html-via-markdown](https://www.npmjs.com/package/@wulechuan/generate-html-via-markdown#api).
+如前所述，本 NPM 包在内部调用另一包（即 “@wulechuan/generate-html-via-markdown”）之功能。并且，本 NPM 包本身并未设计额外的 API（应用编程接口）。因此，要了解使用细节，请参阅完整的《[@wulechuan/generate-html-via-markdown 之 API](https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown/blob/HEAD/ReadMe.md#api)。
 
 
-### Examples
 
-#### Example 1
+### 示例若干
+
+#### 示例 1
+
+不带任何参数，使用默认配置。
 
 ```js
 const gulp = require('gulp')
 const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
 module.exports = function myGulpTask1() {
-    return gulp.src('./my-first-markdown-article.md')
+    return gulp.src('./我的第一篇markdown文章.md')
     .pipe(gulpMarkdownToHTML())
-    .pipe(gulp.dest('./my-articles-folder'))
+    .pipe(gulp.dest('./我的文库'))
 }
 ```
 
 
-#### Example 2
+#### 示例 2
+
+通过参数项，精准控制输出的 HTML。
 
 ```js
 const {
@@ -94,7 +103,7 @@ module.exports = function myGulpTask2() {
             htmlTagLanguage: 'en-US',
         },
         behaviousOfBuiltInTOC: {
-            shouldShowOnlyTwoLevelsOfTOCItemsAtMost: true, // So that the TOC is more concise and clean.
+            shouldShowOnlyTwoLevelsOfTOCItemsAtMost: true, // 这样纲要列表更简介、清爽。
             atBeginingShouldCollapseAllTOCItemsOfLevelsGreaterThan: 1,
             atBeginingShouldExpandTOCWhenWindowsIsWideEnough: true,
         },
@@ -106,18 +115,16 @@ module.exports = function myGulpTask2() {
 
 
 
+## 未来计划
+
+暂无。
 
 
-## TODOs
-
-Nothing at present.
-
-
-
-## License
+## 许可证类型
 
 WTFPL
 
-> NOTE:
+> 注意：
 >
-> I'm not an expert about license types. So I temporarily use WTFPL. But I guess this type of license might conflict with the ones used by those npm packages I'm utilizing.
+> 我未研究过许可证的约束。因此姑且声明为 WTFPL 类型。但实际上该许可证类型可能与我采用的开源模块有冲突。
+

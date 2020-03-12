@@ -7,7 +7,7 @@ const {
 const gulpMarkdownToHTML = require('..')
 
 function generateHTMLViaReadMeEnUS() {
-    return gulpRead('../ReadMe.md')
+    return gulpRead('../ReadMe.en-US.md')
         .pipe(gulpMarkdownToHTML({
             // shouldLogVerbosely: true,
             conversionOptions: {
@@ -21,7 +21,7 @@ function generateHTMLViaReadMeEnUS() {
 }
 
 function generateHTMLViaReadMeZhHansCN() {
-    return gulpRead('../ReadMe.zh-hans-CN.md')
+    return gulpRead('../ReadMe.md')
         .pipe(gulpMarkdownToHTML({
             // shouldLogVerbosely: true,
             conversionOptions: {
