@@ -64,7 +64,7 @@
 
 #### 示例 1
 
-不带任何参数，使用默认配置。
+处理假想存在的“我的第一篇markdown文章.md”，不带任何参数，使用默认配置。
 
 ```js
 const gulp = require('gulp')
@@ -79,7 +79,7 @@ module.exports = function myGulpTask1() {
 
 #### 示例 2
 
-通过参数项，精准控制输出的 HTML。
+处理一批假想存在的“`.md`”文件，并通过参数项精准控制输出的 HTML。
 
 ```js
 const {

@@ -2,16 +2,16 @@
   "name": "@wulechuan/gulp-markdown-to-html",
   "author": "wulechuan <wulechuan@live.com>",
   "license": "WTFPL",
-  "version": "2.9.1",
+  "version": "2.9.2",
   "description": "A gulpjs oriented wrapper of @wulechuan/generate-html-via-markdown.",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint  ./.eslintrc.js  ./tests/**/*.js  ./index.js",
-    "_testWithReadMeMarkDowns": "gulp  --gulpfile  ./tests/gulpfile.js",
-    "_testAllWithoutLintingWithoutBrowser": "npm  run  _testWithReadMeMarkDowns",
-    "test": "npm  run  eslint    &&    npm  run  _testAllWithoutLintingWithoutBrowser",
-    "beforeGitCommit": "npm  test",
-    "prepublishOnly": "npm   test"
+    "_test-with-readme-markdowns": "gulp  --gulpfile  ./tests/gulpfile.js",
+    "_test-all-without-linting-without-browser": "npm  run  _test-with-readme-markdowns",
+    "test": "npm  run  eslint    &&               npm  run  _test-all-without-linting-without-browser",
+    "before-git-commit": "npm  test",
+    "prepublishOnly": "npm     test"
   },
   "keywords": [
     "gulp",
@@ -24,7 +24,28 @@
     "pretty",
     "beautify",
     "gorgeous",
-    "responsive"
+    "responsive",
+    "responsive-layout",
+    "gorgeous",
+    "可读性改善",
+    "层叠样式表",
+    "样式",
+    "文章样式",
+    "文章外观",
+    "文章美化",
+    "文字排版",
+    "文字排版美学",
+    "文章“皮肤”",
+    "文章中的代码着色",
+    "用于美化文章的样式",
+    "尺寸自适应式排版",
+    "自适应式排版",
+    "移动设备上的文字排版",
+    "小尺寸屏幕上的文字排版",
+    "文档格式转换",
+    "文章格式转换",
+    "自带用于美化文章的样式",
+    "批量格式转换工具"
   ],
   "homepage": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper#readme",
   "repository": {
@@ -35,11 +56,11 @@
     "url": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper/issues"
   },
   "devDependencies": {
-    "@wulechuan/css-stylus-markdown-themes": "^6.4.7",
+    "@wulechuan/css-stylus-markdown-themes": "^6.4.12",
     "gulp": "^4.0.2"
   },
   "dependencies": {
-    "@wulechuan/generate-html-via-markdown": "^2.9.4",
+    "@wulechuan/generate-html-via-markdown": "^2.9.6",
     "plugin-error": "^1.0.1",
     "replace-ext": "^1.0.0",
     "through2": "^3.0.1"
