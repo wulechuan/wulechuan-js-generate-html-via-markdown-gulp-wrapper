@@ -6,8 +6,12 @@ const {
 
 const gulpMarkdownToHTML = require('..')
 
+
+
+
+
 function generateHTMLViaReadMeEnUS() {
-    return gulpRead('../ReadMe.en-US.md')
+    return gulpRead('../文档集/说明书/ReadMe.en-US.md')
         .pipe(gulpMarkdownToHTML({
             // shouldLogVerbosely: true,
             conversionOptions: {
@@ -17,8 +21,12 @@ function generateHTMLViaReadMeEnUS() {
                 htmlTagLanguage: 'en-US',
             },
         }))
-        .pipe(gulpWrite('./output'))
+        .pipe(gulpWrite('./诸测试之输出'))
 }
+
+
+
+
 
 function generateHTMLViaReadMeZhHansCN() {
     return gulpRead('../ReadMe.md')
@@ -28,8 +36,12 @@ function generateHTMLViaReadMeZhHansCN() {
                 articleTOCListTagNameIsUL: true,
             },
         }))
-        .pipe(gulpWrite('./output'))
+        .pipe(gulpWrite('./诸测试之输出'))
 }
+
+
+
+
 
 module.exports.default = parallel(
     generateHTMLViaReadMeEnUS,

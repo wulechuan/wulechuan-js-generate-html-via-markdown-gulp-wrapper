@@ -2,7 +2,7 @@
 
 ## Multilingual Editions of this Article
 
-- [简体中文版文档](./ReadMe.md)
+- [简体中文版文档](../../ReadMe.md)
 
 
 
@@ -82,24 +82,24 @@ const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
 
 module.exports = function myGulpTask2() {
     return gulpRead('./your/folder/of/markdowns/**/*.md')
-    .pipe(gulpMarkdownToHTML({
-        // shouldLogVerbosely: true,
-        conversionOptions: {
-            cssClassNameOfHeadingPermanentLinks: undefined,
-            articleTOCListTagNameIsUL: true,
-        },
-        manipulationsOverHTML: {
-            shouldNotInsertBackToTopAnchor: true,
-            shouldNotUseInternalCSSThemingFiles: false,
-            htmlTagLanguage: 'en-US',
-        },
-        behaviousOfBuiltInTOC: {
-            shouldShowOnlyTwoLevelsOfTOCItemsAtMost: true, // So that the TOC is more concise and clean.
-            atBeginingShouldCollapseAllTOCItemsOfLevelsGreaterThan: 1,
-            atBeginingShouldExpandTOCWhenWindowsIsWideEnough: true,
-        },
-    }))
-    .pipe(gulpWrite('./your/output/folder'))
+        .pipe(gulpMarkdownToHTML({
+            // shouldLogVerbosely: true,
+            conversionOptions: {
+                cssClassNameOfHeadingPermanentLinks: undefined,
+                articleTOCListTagNameIsUL: true,
+            },
+            manipulationsOverHTML: {
+                shouldNotInsertBackToTopAnchor: true,
+                shouldNotUseInternalCSSThemingFiles: false,
+                htmlTagLanguage: 'en-US',
+            },
+            behaviousOfBuiltInTOC: {
+                shouldShowOnlyTwoLevelsOfTOCItemsAtMost: true, // So that the TOC is more concise and clean.
+                atBeginingShouldCollapseAllTOCItemsOfLevelsGreaterThan: 1,
+                atBeginingShouldExpandTOCWhenWindowsIsWideEnough: true,
+            },
+        }))
+        .pipe(gulpWrite('./your/output/folder'))
 }
 ```
 
