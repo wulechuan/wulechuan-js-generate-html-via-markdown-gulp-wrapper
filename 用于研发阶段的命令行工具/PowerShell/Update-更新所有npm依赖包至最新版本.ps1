@@ -11,6 +11,7 @@
 
 # 以下均为可采用 latest 版本的【产品依赖包】。顺便提醒，虽然一般而言 latest 版本应恰为最高版本，但并不确保。
 npm i `
+    '@wulechuan/css-stylus-markdown-themes@latest' `
     '@wulechuan/generate-html-via-markdown@latest' `
     'plugin-error@latest' `
     'replace-ext@latest' `
@@ -31,6 +32,5 @@ npm i `
 # 以下均为可采用 latest 版本的【研发依赖包】。顺便提醒，虽然一般而言 latest 版本应恰为最高版本，但并不确保。
 npm i -D `
     '@wulechuan/cli-scripts--git-push@latest' `
-    '@wulechuan/css-stylus-markdown-themes@latest' `
     'eslint@latest' `
     'gulp@latest'
