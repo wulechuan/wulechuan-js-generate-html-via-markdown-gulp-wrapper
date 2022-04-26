@@ -12,7 +12,7 @@
     "test": "npm  run  eslint    &&               npm  run  _test-all-without-linting-without-browser",
     "start": "npm  test",
     "每当制作集得之版本之前": "npm  i    &&    npm  test",
-    "prepublishOnly": "npm      test"
+    "prepublishOnly": "npm                       test    &&    rimraf  ReadMe.html"
   },
   "keywords": [
     "gulp",
