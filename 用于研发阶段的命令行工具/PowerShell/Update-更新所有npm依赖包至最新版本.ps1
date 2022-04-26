@@ -33,4 +33,5 @@ npm i `
 npm i -D `
     '@wulechuan/cli-scripts--git-push@latest' `
     'eslint@latest' `
+    'fs-extra@latest' `
     'gulp@latest'

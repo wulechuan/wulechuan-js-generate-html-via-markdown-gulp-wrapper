@@ -33,4 +33,5 @@ npm i -D \
     '@wulechuan/cli-scripts--git-push@latest' \
     '@wulechuan/css-stylus-markdown-themes@latest' \
     'eslint@latest' \
+    'fs-extra@latest' \
     'gulp@latest'
