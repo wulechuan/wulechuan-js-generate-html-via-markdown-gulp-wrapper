@@ -2,32 +2,40 @@ const through         = require('through2')
 const GulpPluginError = require('plugin-error')
 const replaceFileExt  = require('replace-ext')
 
-const markdownToHTMLConverter = require('@wulechuan/generate-html-via-markdown')
+const 将Markdown字符串转换为HTML字符串 = require('@wulechuan/generate-html-via-markdown')
 
-function createNewGulpError(rawError) {
-    return new GulpPluginError('@wulechuan/gulp-markdown-to-html', rawError)
+/**
+ * @param {Error | string} 原始的记载错误的对象
+ */
+function 构建Gulp生态专用的记载错误的对象_提及的插件名称为本工具(原始的记载错误的对象) {
+    return new GulpPluginError('@wulechuan/gulp-markdown-to-html', 原始的记载错误的对象)
 }
 
-module.exports = function (options) {
+/** @type {import('..')} */
+module.exports = function (将Markdown字符串转换为HTML字符串之转换器之配置项集) {
     return through.obj(function (file, fileEncoding, callback) {
         if (file.isStream()) {
-            return callback(createNewGulpError('Streaming is not supported.'))
+            return callback(构建Gulp生态专用的记载错误的对象_提及的插件名称为本工具('Streaming is not supported.'))
         }
 
         if (file.isNull()) {
             return callback(null, file)
         }
 
-        let htmlContent
+        /** @type {string} */
+        let 转换得到的HTML文件内容全文
         try {
-            htmlContent = markdownToHTMLConverter(file.contents.toString(fileEncoding || 'utf-8'), options)
+            转换得到的HTML文件内容全文 = 将Markdown字符串转换为HTML字符串(
+                file.contents.toString(fileEncoding || 'utf-8'),
+                将Markdown字符串转换为HTML字符串之转换器之配置项集
+            )
         } catch(error) {
             // delete error.input
-            return callback(createNewGulpError(error))
+            return callback(构建Gulp生态专用的记载错误的对象_提及的插件名称为本工具(error))
         }
 
         file.path = replaceFileExt(file.path, '.html')
-        file.contents = Buffer.from(htmlContent)
+        file.contents = Buffer.from(转换得到的HTML文件内容全文)
 
         return callback(null, file)
     })
