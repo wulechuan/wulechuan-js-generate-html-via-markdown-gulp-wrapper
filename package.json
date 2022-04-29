@@ -15,14 +15,6 @@
     "每当制作集得之版本之前": "npm  i    &&    npm  test",
     "prepublishOnly": "npm                       test    &&    rimraf  ReadMe.html"
   },
-  "homepage": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper.git"
-  },
-  "bugs": {
-    "url": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper/issues"
-  },
   "dependencies": {
     "@wulechuan/css-stylus-markdown-themes": "^7.5.1",
     "@wulechuan/generate-html-via-markdown": "^3.2.0",
@@ -35,6 +27,14 @@
     "eslint": "^8.14.0",
     "fs-extra": "^10.1.0",
     "gulp": "^4.0.2"
+  },
+  "homepage": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper/issues"
   },
   "keywords": [
     "gulp",
