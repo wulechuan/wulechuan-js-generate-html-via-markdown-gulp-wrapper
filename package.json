@@ -2,9 +2,10 @@
   "name": "@wulechuan/gulp-markdown-to-html",
   "author": "吴乐川 <wulechuan@live.com>",
   "license": "WTFPL",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "此为吴乐川的《将 MarkDown 代码转换为 HTML 代码的工具的针对 Gulpjs 工具链的“包裹”程序》。其调用《@wulechuan/generate-html-via-markdown》之功能，用以将一组 MarkDown 文件逐一转换成对应的 HTML 文件。",
   "main": "源代码/index.js",
+  "types": "源代码/index.d.ts",
   "scripts": {
     "eslint": "eslint  ./.eslintrc.js  ./源代码/index.js  ./测试集/**/*.js",
     "_test-with-readme-markdowns": "gulp  --gulpfile  ./测试集/gulpfile.js",
@@ -13,6 +14,27 @@
     "start": "npm  test",
     "每当制作集得之版本之前": "npm  i    &&    npm  test",
     "prepublishOnly": "npm                       test    &&    rimraf  ReadMe.html"
+  },
+  "homepage": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper/issues"
+  },
+  "dependencies": {
+    "@wulechuan/css-stylus-markdown-themes": "^7.5.1",
+    "@wulechuan/generate-html-via-markdown": "^3.2.0",
+    "plugin-error": "^1.0.1",
+    "replace-ext": "^2.0.0",
+    "through2": "^4.0.2"
+  },
+  "devDependencies": {
+    "@wulechuan/cli-scripts--git-push": "^2.0.2",
+    "eslint": "^8.14.0",
+    "fs-extra": "^10.1.0",
+    "gulp": "^4.0.2"
   },
   "keywords": [
     "gulp",
@@ -48,26 +70,5 @@
     "responsive",
     "responsive-layout",
     "gorgeous"
-  ],
-  "homepage": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper.git"
-  },
-  "bugs": {
-    "url": "https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown-gulp-wrapper/issues"
-  },
-  "dependencies": {
-    "@wulechuan/css-stylus-markdown-themes": "^7.5.0",
-    "@wulechuan/generate-html-via-markdown": "^3.2.0",
-    "plugin-error": "^1.0.1",
-    "replace-ext": "^2.0.0",
-    "through2": "^4.0.2"
-  },
-  "devDependencies": {
-    "@wulechuan/cli-scripts--git-push": "^2.0.1",
-    "eslint": "^8.14.0",
-    "fs-extra": "^10.1.0",
-    "gulp": "^4.0.2"
-  }
+  ]
 }

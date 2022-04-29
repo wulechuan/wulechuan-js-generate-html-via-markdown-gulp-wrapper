@@ -1,11 +1,13 @@
+# 《吴乐川的将 MarkDown 代码转换为 HTML 代码的工具》的针对 Gulpjs 工具链的“包裹”程序
+
+
 <link rel="stylesheet" href="./node_modules/@wulechuan/css-stylus-markdown-themes/源代码/发布的源代码/文章排版与配色方案集/层叠样式表/wulechuan-styles-for-html-via-markdown--vscode.default.min.css">
 
-# 用于吴乐川将 MarkDown 代码转换为 HTML 代码的工具的针对 Gulpjs 工具链的“包裹”程序
 
 
 ## Multilingual Editions of this Article
 
-- [English version of this ReadMe](./文档集/说明书/ReadMe.en-US.md)
+- [English edition of this ReadMe](./文档集/说明书/ReadMe.en-US.md)
 
 
 
@@ -65,7 +67,7 @@
 
 #### 示例 1
 
-处理假想存在的“我的第一篇markdown文章.md”，不带任何参数，使用默认配置。
+处理假想存在的“**我的第一篇markdown文章.md**”，不带任何参数，使用默认配置。
 
 ```js
 const gulp = require('gulp')
@@ -93,26 +95,26 @@ const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
 module.exports = function myGulpTask2() {
     return gulpRead('./在你的/计算机中的/某个文件夹内的/文集/**/*.md')
         .pipe(gulpMarkdownToHTML({ // 请留意这一行代码。
-            将Markdown转换为HTML之阶段: {
-                文章纲要列表应采用UL标签而非OL标签: true,
+            '将Markdown转换为HTML之阶段': {
+                '文章纲要列表应采用UL标签而非OL标签': true,
 
-                针对MarkdownIt生态之诸工具的层叠样式表类名集: {
-                    用于各级标题之超链接A标签的: undefined,
+                '针对MarkdownIt生态之诸工具的层叠样式表类名集': {
+                    '用于各级标题之超链接A标签的': undefined,
                 },
             },
 
-            对HTML做进一步处理之阶段: {
-                不应注入用于返回文章起始之按钮: true,
-                不应采用任何由本工具内建之层叠样式表: false,
-                产出之HTML文件之HTML标签之语言属性之取值: 'en-US',
+            '对HTML做进一步处理之阶段': {
+                '不应注入用于返回文章起始之按钮': true,
+                '不应采用任何由本工具内建之层叠样式表': false,
+                '产出之HTML文件之HTML标签之语言属性之取值': 'en-US',
             },
 
-            对本工具现成提供的文章纲要做以下配置: {
-                为求文章纲要列表简洁明了故意仅显示两层条目以至于较深层级条目形同作废: true,
+            '对本工具现成提供的文章纲要做以下配置': {
+                '为求文章纲要列表简洁明了故意仅显示两层条目以至于较深层级条目形同作废': true,
 
                 // 注意： 【呈现文章纲要列表面板】与【展开文章纲要列表的某一条目】并非一回事。
-                浏览器打开HTML文章最初之时文章纲要列表中凡层级深于该值之条目均应收叠: 1,
-                浏览器打开HTML文章最初之时若浏览器窗口足够宽大则直接展开文章纲要列表之面板: true,
+                '浏览器打开HTML文章最初之时文章纲要列表中凡层级深于该值之条目均应收叠': 1,
+                '浏览器打开HTML文章最初之时若浏览器窗口足够宽大则直接展开文章纲要列表之面板': true,
             },
         }))
         .pipe(gulpWrite('./在你的/计算机中的/另一个文件夹'))

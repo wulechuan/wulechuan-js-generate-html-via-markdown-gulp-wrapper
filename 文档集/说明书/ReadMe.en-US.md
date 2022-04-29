@@ -1,5 +1,10 @@
 # Gulpjs Oriented Wrapper for Wulechuan's Tool for Generating HTMLs via Markdowns
 
+
+<link rel="stylesheet" href="../../node_modules/@wulechuan/css-stylus-markdown-themes/源代码/发布的源代码/文章排版与配色方案集/层叠样式表/wulechuan-styles-for-html-via-markdown--vscode.default.min.css">
+
+
+
 ## Multilingual Editions of this Article
 
 - [简体中文版文档](../../ReadMe.md)
@@ -78,26 +83,26 @@ const gulpMarkdownToHTML = require('@wulechuan/gulp-markdown-to-html')
 module.exports = function myGulpTask2() {
     return gulpRead('./your/folder/of/markdowns/**/*.md')
         .pipe(gulpMarkdownToHTML({
-            将Markdown转换为HTML之阶段: {
-                文章纲要列表应采用UL标签而非OL标签: true,
+            '将Markdown转换为HTML之阶段': {
+                '文章纲要列表应采用UL标签而非OL标签': true,
 
-                针对MarkdownIt生态之诸工具的层叠样式表类名集: {
-                    用于各级标题之超链接A标签的: undefined,
+                '针对MarkdownIt生态之诸工具的层叠样式表类名集': {
+                    '用于各级标题之超链接A标签的': undefined,
                 },
             },
 
-            对HTML做进一步处理之阶段: {
-                不应注入用于返回文章起始之按钮: true,
-                不应采用任何由本工具内建之层叠样式表: false,
-                产出之HTML文件之HTML标签之语言属性之取值: 'en-US',
+            '对HTML做进一步处理之阶段': {
+                '不应注入用于返回文章起始之按钮': true,
+                '不应采用任何由本工具内建之层叠样式表': false,
+                '产出之HTML文件之HTML标签之语言属性之取值': 'en-US',
             },
 
-            对本工具现成提供的文章纲要做以下配置: {
-                为求文章纲要列表简洁明了故意仅显示两层条目以至于较深层级条目形同作废: true,
+            '对本工具现成提供的文章纲要做以下配置': {
+                '为求文章纲要列表简洁明了故意仅显示两层条目以至于较深层级条目形同作废': true,
 
                 // 注意： 【呈现文章纲要列表面板】与【展开文章纲要列表的某一条目】并非一回事。
-                浏览器打开HTML文章最初之时文章纲要列表中凡层级深于该值之条目均应收叠: 1,
-                浏览器打开HTML文章最初之时若浏览器窗口足够宽大则直接展开文章纲要列表之面板: true,
+                '浏览器打开HTML文章最初之时文章纲要列表中凡层级深于该值之条目均应收叠': 1,
+                '浏览器打开HTML文章最初之时若浏览器窗口足够宽大则直接展开文章纲要列表之面板': true,
             },
         }))
         .pipe(gulpWrite('./your/output/folder'))
