@@ -27,13 +27,6 @@
 
 
 
-
-
-## 简介
-
-本工具系对本人另一程序“[@wulechuan/generate-html-via-markdown](https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown/blob/master/ReadMe.md)”的“包裹”版本，以令其功能适用于 Gulpjs 工具链。
-
-
 ## 源代码仓库
 
 | <span style="display:inline-block;width:10em;">提供仓库服务之组织</span> | <span style="display:inline-block;width:9em;">仓库组织之国别</span> | 仓库地址 |
@@ -44,22 +37,35 @@
 
 
 
-### 产品亮点
+
+
+## 简介
+
+本工具系对本人另一程序“[@wulechuan/generate-html-via-markdown](https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown/blob/master/ReadMe.md)”的“包裹”版本，以令其功能适应 Gulpjs 工具链。
+
+
+### 功能亮点
 
 不须带任何参数，即可轻松获得一份华丽的 HTML 文档。其自带精美主题，宽窄屏全自适应排版。包含文章纲要列表，“返回顶部”按钮（实则链接）等等。
 
-你亦可通过丰富的参数项，精准控制输出 HTML 之方方面面。从文章纲要列表到“返回顶部”按钮。甚至控制内嵌 CSS 和 Javascript 是否为压缩版本，亦有两个专门的选项。
+亦可通过丰富的参数项，精准控制输出 HTML 之方方面面。从文章纲要列表到“返回顶部”按钮。甚至控制内嵌 CSS 和 Javascript 是否为压缩版本，亦有两个专门的选项。
 
 
-### 内嵌样式
 
-产生的 HTML 文章中，内嵌样式来源于本人创建和维护的另一项目，即《[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)》，暂称“项目甲”，亦称“**工具甲**”。
+### 输出的 HTML 中内嵌样式之来历
+
+本工具默认输出的 HTML 文件在浏览器中呈现时，堪称精美。那么，装点这些 HTML 的样式从哪里来呢？
+
+产生的 HTML 文章中的内嵌样式来源于本人创建和维护的另一项目，即《[@wulechuan/css-stylus-markdown-themes](https://www.npmjs.com/package/@wulechuan/css-stylus-markdown-themes)》，暂称“项目甲”，亦称“**工具甲**”。工具甲提供了一组现场的层叠样式表。本工具则选用了甲提供的一款浅色的默认样式。
 
 工具甲之文档集中有若干截图，直观展示一篇文档在应用上述项目自带的两种默认主题样式后之样貌。这两种主题为浅色，另一为深色。见《[关于文章排版与配色效果示例集的说明](https://gitee.com/nanchang-wulechuan/wulechuan-css-stylus-themes-for-htmls-via-markdowns/blob/master/%E6%96%87%E6%A1%A3%E9%9B%86/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E6%B1%89%E8%AF%AD/%E5%85%B3%E4%BA%8E%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88%E4%B8%8E%E9%85%8D%E8%89%B2%E6%95%88%E6%9E%9C%E7%A4%BA%E4%BE%8B%E9%9B%86%E7%9A%84%E8%AF%B4%E6%98%8E.md)》。
 
+
+
+
 ## 用法
 
-如前所述，本 NPM 包在内部调用另一包（即 “@wulechuan/generate-html-via-markdown”）之功能。并且，本 NPM 包本身并未设计额外的 API（应用编程接口）。因此，要了解使用细节，请参阅完整的《[@wulechuan/generate-html-via-markdown 之 API](https://github.com/wulechuan/wulechuan-js-generate-html-via-markdown/blob/HEAD/ReadMe.md#api)》。
+如前所述，本 NPM 包在内部调用另一包（即 “@wulechuan/generate-html-via-markdown”）之功能。并且，本 NPM 包本身并未设计额外的 API（应用编程接口）。因此，要了解使用细节，请参阅完整的《[@wulechuan/generate-html-via-markdown 之 应用编程接口](https://gitee.com/nanchang-wulechuan/wulechuan-js-generate-html-via-markdown#%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E6%8E%A5%E5%8F%A3%E5%A4%96%E5%9B%BD%E8%AF%9D%E6%89%80%E8%B0%93-api)》。
 
 
 
@@ -122,9 +128,9 @@ module.exports = function myGulpTask2() {
 ```
 
 
-### 应用编程接口（即 API ）
+### 应用编程接口（外国话所谓 API）
 
-本工具适配 Gulpjs 生态，故仅提供唯一的默认导出体（ `export` ），其为一个函数。该函数之签名（ Signature ）如下：
+本工具适配 Gulpjs 生态，故仅提供唯一的导出体（ `export` ），且该导出体为默认导出体。该导出体是一个函数，签名（ Signature ）如下：
 
 ```ts
 import type {
@@ -132,10 +138,10 @@ import type {
 } from '@wulechuan/generate-html-via-markdown'
 
 import type {
-    obj,
+    obj as 范_through2_obj,
 } from 'through2'
 
-type 范_返回值 = ReturnType<typeof obj>;
+type 范_返回值 = ReturnType<typeof 范_through2_obj>;
 declare function _本工具默认导出之函数_临时名称 (
     配置项集: 范_将Markdown字符串转换为HTML字符串之转换器之配置项集
 ): 范_返回值;
