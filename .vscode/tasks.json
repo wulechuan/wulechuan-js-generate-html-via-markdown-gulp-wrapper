@@ -21,7 +21,7 @@
             "label": "每当制作集得之版本之前",
             "type": "shell",
             "command": "npm  run  每当制作集得之版本之前",
-            "group": "none",
+            "group": "build",
             "problemMatcher": []
         },
         {
