@@ -2,7 +2,7 @@
   "name": "@wulechuan/gulp-markdown-to-html",
   "author": "吴乐川 <wulechuan@live.com>",
   "license": "WTFPL",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "此为吴乐川的《将 MarkDown 代码转换为 HTML 代码的工具的针对 Gulpjs 工具链的“包裹”程序》。其调用《@wulechuan/generate-html-via-markdown》之功能，用以将一组 MarkDown 文件逐一转换成对应的 HTML 文件。",
   "main": "源代码/index.js",
   "types": "源代码/index.d.ts",
@@ -16,8 +16,8 @@
     "prepublishOnly": "npm                       test    &&    rimraf  ReadMe.html"
   },
   "dependencies": {
-    "@wulechuan/css-stylus-markdown-themes": "^7.6.2",
-    "@wulechuan/generate-html-via-markdown": "^3.2.2",
+    "@wulechuan/css-stylus-markdown-themes": "^7.7.0",
+    "@wulechuan/generate-html-via-markdown": "^3.2.4",
     "plugin-error": "^1.0.1",
     "replace-ext": "^2.0.0",
     "through2": "^4.0.2"
