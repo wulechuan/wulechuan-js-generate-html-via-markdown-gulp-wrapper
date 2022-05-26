@@ -114,19 +114,37 @@ PROCESS {
                     '@wulechuan/cli-scripts--git-push'            = $null
                     '@wulechuan/cli-scripts--npm-project-helpers' = $null
 
-                    # 半小时后错误难以再现。遂暂时放弃令本工具依赖 chalk 。
-                    # 'chalk'                                       = @('^4', (@(
-                    #     '2022-05-27 发现本工具在加载 @wulechuan/generate-html-via-markdown （称甲）时，'
-                    #     '甲会在其尝试加载 chalk 时报错。但错误不易重现。有过若干次，却并非每每出现。'
-                    #     '或许因为 npm 依赖包加载顺序是不可预期的。'
-                    #     "`n"
-                    #     '奇怪的是从前没有此类问题。一直以来，甲明确依赖了 chalk 。且因此 chalk 明明已安装。'
-                    #     "`n"
-                    #     '解决的办法是令本工具也依赖 chalk ，尽管本工具自己的代码并不直接引用 chalk 。'
-                    #     "`n"
-                    #     '又因 chalk 自版本 5 始，仅支持 ES Module 的加载方式。为迁就甲的较旧的 require 式写法，'
-                    #     '必须安装 chalk 4 或更早的版本。不妨就安装 4 。'
-                    # ) -join ''))
+
+                    # ─────────────────────────────────────────────────────────────────────────────────
+                    # 关于 chalk 
+                    # ─────────────────────────────────────────────────────────────────────────────────
+                    'chalk'                                       = @('^4', (@(
+                        '2022-05-27 发现本工具在加载 @wulechuan/generate-html-via-markdown （称甲）时，'
+                        '甲会在其尝试加载 chalk 时报错。但错误不易重现。有过若干次，却并非每每出现。'
+                        '或许因为 npm 依赖包的安装顺序是不可预期的。'
+                        "`n"
+                        '已知 chalk 自第 5 版始，仅支持 ES Module 的加载方式。'
+                        '而甲采用的较旧的 require 式写法加载各其依赖包，'
+                        '故甲必须采用 chalk 4 或更早的版本。'
+                        "`n"
+                        '经反复实验观察'
+                        "`n"
+                        '- 凡遭遇故障时，本项目第一层 node_modules 文件夹内的 chalk 是 5.x 版。'
+                        '  而甲内的 node_modules 是 4.x 版，这看似符合甲的要求。'
+                        '  问题在于，遇到 require 语句时 node 不够可控，'
+                        '  此种情形 node 会有些加载 chalk 5。于是出错。'
+                        "`n"
+                        '- 凡一切顺利时，本项目第一层 node_modules 文件夹内的 chalk 是 4.x 版。'
+                        "`n"
+                        '总结，npm 安排同名不同版的软件包时，顺序受外界不详因素的影响，给人以 “随机” 的感觉。'
+                        '同时，node 调用某软件时，并不确保总是努力搜寻 npm 声明的正确的版本。'
+                        '两者不知谁该承担责任。'
+                        "`n"
+                        '解决的办法是故意令本工具依赖 chalk 第 4 版，尽管本工具自己的代码并不直接引用 chalk 。'
+                        '此种做法，作为 node 的一个外因，可有效干预安装 chalk 各的版本时的存储位置的安排。'
+                        '迄今未知，尚未失效过。'
+                    ) -join ''))
+                    # ─────────────────────────────────────────────────────────────────────────────────
 
                     'eslint'                                      = $null
                     'fs-extra'                                    = $null
@@ -160,11 +178,23 @@ PROCESS {
 
         } else {
 
-            # if (${script:应仅作仿真演练}) {
-            #     Write-Host  '   【仿真演练】 npx  browserslist@latest  --update-db'
-            # } else {
-            #     npx  browserslist@latest  --update-db
-            # }
+            # ───────────────────────────
+
+            if ($false) {
+                if (${script:应仅作仿真演练}) {
+                    Write-Host  -NoNewline  "   【仿真演练】`n    "
+                }
+
+                Write-Host  'npx  browserslist@latest  --update-db'
+
+                if (-not ${script:应仅作仿真演练}) {
+                    npx  browserslist@latest  --update-db
+                }
+
+                Write-Host
+            }
+
+            # ───────────────────────────
 
         }
 
@@ -192,6 +222,7 @@ PROCESS {
             # Write-Host
 
             # Write-Host '{'
+
             # Write-吴乐川打印_JSON_键          -Indent 1 '爷爷' -ValueIsObject
             # Write-吴乐川打印_JSON_键          -Indent 2 '葫芦娃' -ValueIsObject
             # Write-Host
@@ -201,7 +232,8 @@ PROCESS {
             # Write-吴乐川打印_JSON_值_文本型    -IsValueOfLastKey '力娃子'
             # Write-吴乐川打印_JSON_某字典结束    -Indent 2
             # Write-吴乐川打印_JSON_某字典结束    -Indent 1
-            # Write-吴乐川打印_JSON_某字典结束    -Indent 0
+
+            # Write-Host '}'
 
         }
 
@@ -232,7 +264,7 @@ BEGIN {
 
     if ("$PWD" -match "\\用于研发阶段的命令行工具集\\PowerShell`$") {
         ${private:执行本命令前的工作路径} = "$PWD"
-        Set-Location '..\..\' # 确保进程的当前路径为接受本工具集服务的 npm 包的根文件夹。
+        Set-Location ..\..\ # 确保进程的当前路径为接受本工具集服务的 npm 包的根文件夹。
         Write-Host "`n【当下工作路径】临时变更为：`n    '$PWD'"
     }
 
