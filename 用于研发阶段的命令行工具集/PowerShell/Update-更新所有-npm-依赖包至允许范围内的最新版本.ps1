@@ -113,6 +113,21 @@ PROCESS {
 
                     '@wulechuan/cli-scripts--git-push'            = $null
                     '@wulechuan/cli-scripts--npm-project-helpers' = $null
+
+                    # 半小时后错误难以再现。遂暂时放弃令本工具依赖 chalk 。
+                    # 'chalk'                                       = @('^4', (@(
+                    #     '2022-05-27 发现本工具在加载 @wulechuan/generate-html-via-markdown （称甲）时，'
+                    #     '甲会在其尝试加载 chalk 时报错。但错误不易重现。有过若干次，却并非每每出现。'
+                    #     '或许因为 npm 依赖包加载顺序是不可预期的。'
+                    #     "`n"
+                    #     '奇怪的是从前没有此类问题。一直以来，甲明确依赖了 chalk 。且因此 chalk 明明已安装。'
+                    #     "`n"
+                    #     '解决的办法是令本工具也依赖 chalk ，尽管本工具自己的代码并不直接引用 chalk 。'
+                    #     "`n"
+                    #     '又因 chalk 自版本 5 始，仅支持 ES Module 的加载方式。为迁就甲的较旧的 require 式写法，'
+                    #     '必须安装 chalk 4 或更早的版本。不妨就安装 4 。'
+                    # ) -join ''))
+
                     'eslint'                                      = $null
                     'fs-extra'                                    = $null
                     'gulp'                                        = $null
